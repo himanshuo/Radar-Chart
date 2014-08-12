@@ -1,0 +1,51 @@
+<form action="" method="post" class="dark-matter">
+  <h1>Data Form        <span>Please fill all fields.</span>
+      </h1>
+  <p>
+    <label>
+      <span>Data Name :</span>
+      <input id="name" type="text" name="name" placeholder="Data Name" ng-model="name" />
+    </label>
+    <label>
+      <span>Data labels :</span>
+      <textarea id="variables" type="text" name="variables" placeholder="Enter Name of variables seperated by commas" ng-model="stringVar"></textarea>
+    </label>
+    <label>
+      <span>Data :</span>
+      <textarea id="data" name="data" ng-model="data" placeholder="insert data seperated by commas"></textarea>
+    </label>
+    <label>
+      <span>Data Maximums :</span>
+      <textarea id="dataMax" name="dataMax" ng-model="dataMax" placeholder="insert data maximums seperated by commas"></textarea>
+    </label>
+    <!-- <label>
+          <span></span>
+          <input type="button" class="button" value="Submit" />
+        </label> -->
+  </p>
+</form>
+
+<p ng-click="makeGraph()">click here</p>
+{{"name:"+name}}
+<br />{{"stringVar:"+stringVar}}
+<br/>{{"variables:"+variables}}
+<br />{{"data:"+data}}
+<br />{{"dataMax:"+dataMax}}
+
+
+
+<br />
+
+<div style="width: 50%">
+  <canvas id="canvas" height="450" width="600"></canvas>
+</div>
+
+<ul class=\<=name.toLowerCase()>-legend\>
+  <% for (var i=0; i<datasets.length; i++){%>
+    <li><span style="background-color:<%=datasets[i].lineColor%>\"></span>
+      <%if(datasets[i].label){%>
+        <%=datasets[i].label%>
+          <%}%>
+    </li>
+    <%}%>
+</ul>

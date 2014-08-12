@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Radar Chart</title>
+  
+  <script src="Chart.js"></script>
+
+
+  <meta name="viewport" content="initial-scale = 1, user-scalable = no" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <form action="" method="post" class="dark-matter">
+    <h1>Data Form                <span>Please fill all fields.</span>
+      </h1>
+    <p>
+      <label>
+        <span>Chart Name :</span>
+        <input id="name" type="text" name="name" placeholder="Radar Chart Name" />
+      </label>
+      <label>
+        <span>Variables :</span>
+        <input id="variables" type="text" name="variables" placeholder="Enter Name of Variables (seperated by commas)" />
+      </label>
+      <label>
+        <span>Data Maximums :</span>
+        <input id="dataMax" name="dataMax" type="text" placeholder="Enter Max. Value for each Variable (seperated by commas)" />
+      </label>
+      <label>
+        <span>Data :</span>
+        <textarea id="data" name="data" placeholder="Insert Data Values (seperated by commas) Each new line is a new set of Data"></textarea>
+      </label>
+
+    </p>
+    <div onclick="graphit()" id="button" class="button" onmouseout="turnToImage()">Make Chart</div>
+     <a id="downloadlink"  href="" download="Radar Chart">Download Image</a>
+    <!-- <label>
+          <span></span>
+          <input type="button" class="button" value="Submit" />
+        </label> -->
+  </form>
+  <br/><br/><br/>
+  <div id="canvasHolder">
+  
+    <canvas id="canvas"></canvas>
+    
+   
+  </div>
+  
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
